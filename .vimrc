@@ -42,26 +42,24 @@ let g:ctrlp_custom_ignore = {
 
 :let mapleader = ','
 
-nmap <leader>ae :Tabularize /=<CR>
-vmap <leader>ae :Tabularize /=<CR>
-map  <leader>l  :NERDTreeToggle<CR>
-
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+nmap <leader>ae :Tabularize /=<CR>
+nmap <leader>c :TComment<CR>
+vmap <leader>c :TComment<CR>
+nmap <leader>C :TCommentBlock<CR>
+vmap <leader>C :TCommentBlock<CR>
+nmap <leader>l :NERDTreeToggle<CR>
+nmap <leader>n :vsp<CR>:CtrlP<CR>
+nmap <leader>p :set invpaste<CR>
+
 inoremap jk <Esc>:w<CR>
 inoremap kj <Esc>:w<CR>
 
 nnoremap ; :
-
-nnoremap <leader>c :TComment<CR>
-vnoremap <leader>c :TComment<CR>
-nnoremap <leader>C :TCommentBlock<CR>
-vnoremap <leader>C :TCommentBlock<CR>
-nnoremap <leader>n :vsp<CR>:CtrlP<CR>
-nnoremap <leader>p :set invpaste<CR>
 
 " AUTO -----------------------------------------------------------------------
 
