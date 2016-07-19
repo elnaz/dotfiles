@@ -25,6 +25,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scwood/vim-hybrid'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'VundleVim/Vundle.vim'
 
 call vundle#end()
@@ -53,6 +54,11 @@ inoremap jk <Esc>:w<CR>
 inoremap kj <Esc>:w<CR>
 
 nnoremap ; :
+
+nnoremap <leader>c :TComment<CR>
+vnoremap <leader>c :TComment<CR>
+nnoremap <leader>C :TCommentBlock<CR>
+vnoremap <leader>C :TCommentBlock<CR>
 
 " AUTO -----------------------------------------------------------------------
 
