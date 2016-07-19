@@ -26,6 +26,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scwood/vim-hybrid'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 
 call vundle#end()
