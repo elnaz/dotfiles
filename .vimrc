@@ -19,10 +19,12 @@ set wrapmargin=0                                                               "
 set rtp+=~/.vim/bundle/Vundle.vim                                              " set the runtime path to include vundle
 call vundle#begin()                                                            " initialize vundle
 
+Plugin 'airblade/vim-gitgutter'
 Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scwood/vim-hybrid'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'VundleVim/Vundle.vim'
 
 call vundle#end()
