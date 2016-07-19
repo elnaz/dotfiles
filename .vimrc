@@ -1,6 +1,7 @@
 filetype off                                                                   " required by vundle
 filetype plugin indent on                                                      " required by vundle
 
+set backspace=indent,eol,start                                                 " make backspace work like normal
 set expandtab                                                                  " tabs
 set nobackup                                                                   " disable backups
 set nocompatible                                                               " required by vundle
@@ -37,11 +38,6 @@ let g:ctrlp_custom_ignore = {
 
 :let mapleader = ','
 
-inoremap kj <Esc>:w<CR>
-inoremap jk <Esc>:w<CR>
-
-nnoremap ; :
-
 nmap <leader>ae :Tabularize /=<CR>
 vmap <leader>ae :Tabularize /=<CR>
 map  <leader>l  :NERDTreeToggle<CR>
@@ -50,6 +46,11 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+inoremap jk <Esc>:w<CR>
+inoremap kj <Esc>:w<CR>
+
+nnoremap ; :
 
 " AUTO -----------------------------------------------------------------------
 
