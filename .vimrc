@@ -61,6 +61,7 @@ vnoremap <leader>c :TComment<CR>
 nnoremap <leader>C :TCommentBlock<CR>
 vnoremap <leader>C :TCommentBlock<CR>
 nnoremap <leader>n :vsp<CR>:CtrlP<CR>
+nnoremap <leader>p :set invpaste<CR>
 
 " AUTO -----------------------------------------------------------------------
 
