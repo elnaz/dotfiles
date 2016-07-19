@@ -58,6 +58,7 @@ autocmd BufEnter *                                                             "
   \ if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree())
   \ | q
   \ | endif
+autocmd BufNewFile,BufRead *.json set ft=javascript                            " json syntax highlighting
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif            " remove trailing whitespace
 autocmd FileType * setlocal formatoptions-=cro                                 " disable auto commenting
 autocmd StdinReadPre * let s:std_in=1                                          " open NERDTree if no files selected
