@@ -23,7 +23,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scwood/vim-hybrid'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()
 
@@ -32,16 +31,6 @@ call vundle#end()
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|node_modules\|log\|tmp\|coverage$',
   \ 'file': '\.DS_Store$'
-  \ }
-
-let g:NERDTreeIndicatorMapCustom = {
-  \ "Modified"  : "m",
-  \ "Staged"    : ".",
-  \ "Untracked" : "?",
-  \ "Renamed"   : "->",
-  \ "Deleted"   : "x",
-  \ "Dirty"     : "*",
-  \ "Unknown"   : "??"
   \ }
 
 " MAPPINGS -------------------------------------------------------------------
@@ -64,9 +53,14 @@ map <C-l> <C-W>l
 
 " AUTO -----------------------------------------------------------------------
 
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd BufEnter *                                                             " close nerdtree with last tab
+  \ if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree())
+  \ | q
+  \ | endif
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif            " remove trailing whitespace
 autocmd FileType * setlocal formatoptions-=cro                                 " disable auto commenting
+autocmd StdinReadPre * let s:std_in=1                                          " open NERDTree if no files selected
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif    " open NERDTree if no files selected
 
 " STYLE ----------------------------------------------------------------------
 
