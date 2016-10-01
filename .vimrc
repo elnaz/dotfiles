@@ -20,7 +20,9 @@ set rtp+=~/.vim/bundle/Vundle.vim                                              "
 call vundle#begin()                                                            " initialize vundle
 
 Plugin 'airblade/vim-gitgutter'
+Plugin 'elixir-lang/vim-elixir'
 Plugin 'godlygeek/tabular'
+Plugin 'janko-m/vim-test'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scwood/vim-hybrid'
@@ -39,6 +41,9 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.DS_Store$'
   \ }
 
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
 " MAPPINGS -------------------------------------------------------------------
 
 :let mapleader = ','
@@ -56,6 +61,8 @@ vmap <leader>C :TCommentBlock<CR>
 nmap <leader>l :NERDTreeToggle<CR>
 nmap <leader>n :vsp<CR>:CtrlP<CR>
 nmap <leader>p :set invpaste<CR>
+nmap <leader>tf :TestFile<CR>
+nmap <leader>tn :TestNearest<CR>
 
 inoremap jk <Esc>:w<CR>
 inoremap kj <Esc>:w<CR>
@@ -69,6 +76,7 @@ autocmd BufEnter *                                                             "
   \ | q
   \ | endif
 autocmd BufNewFile,BufRead *.json set ft=javascript                            " json syntax highlighting
+autocmd BufRead,BufNewFile *.ex* set filetype=elixir
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif            " remove trailing whitespace
 autocmd FileType * setlocal formatoptions-=cro                                 " disable auto commenting
 autocmd StdinReadPre * let s:std_in=1                                          " open NERDTree if no files selected
