@@ -1,9 +1,11 @@
-[user]
-  name = Elnaz Moshfeghian
-  email = elnaz.mosh@gmail.com
 [alias]
   fixup = commit --amend -C HEAD
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   required = true
+[init]
+  templatedir = ~/.git-templates
+[user]
+  name = Elnaz Moshfeghian
+  email = elnaz.mosh@gmail.com
