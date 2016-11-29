@@ -1,5 +1,5 @@
 # COMMANDS
-alias vim='/usr/local/Cellar/vim/7.4.2033/bin/vim'
+alias vim='/usr/local/Cellar/vim/8.0.0104/bin/vim'
 
 # FOLDERS
 alias dev='cd ~/dev'
