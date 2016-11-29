@@ -1,5 +1,7 @@
 [alias]
   fixup = commit --amend -C HEAD
+[core]
+  editor = vim
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
@@ -9,5 +11,3 @@
 [user]
   name = Elnaz Moshfeghian
   email = elnaz.mosh@gmail.com
-[core]
-  editor = vim
