@@ -9,3 +9,5 @@
 [user]
   name = Elnaz Moshfeghian
   email = elnaz.mosh@gmail.com
+[core]
+  editor = vim
