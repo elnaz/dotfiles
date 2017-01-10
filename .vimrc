@@ -2,6 +2,7 @@ filetype off                                                                   "
 filetype plugin indent on                                                      " required by vundle
 
 set backspace=indent,eol,start                                                 " make backspace work like normal
+set clipboard=unnamed                                                          " use system clipboard
 set expandtab                                                                  " tabs
 set nobackup                                                                   " disable backups
 set nocompatible                                                               " required by vundle
@@ -21,9 +22,11 @@ call vundle#begin()                                                            "
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'fatih/vim-go'
 Plugin 'godlygeek/tabular'
 Plugin 'janko-m/vim-test'
 Plugin 'kien/ctrlp.vim'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scwood/vim-hybrid'
 Plugin 'terryma/vim-multiple-cursors'
