@@ -4,6 +4,7 @@ filetype plugin indent on                                                      "
 set backspace=indent,eol,start                                                 " make backspace work like normal
 set clipboard=unnamed                                                          " use system clipboard
 set expandtab                                                                  " tabs
+set hlsearch                                                                   " highlight search results
 set nobackup                                                                   " disable backups
 set nocompatible                                                               " required by vundle
 set noswapfile                                                                 " disable backups
