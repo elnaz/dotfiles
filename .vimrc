@@ -5,12 +5,14 @@ set backspace=indent,eol,start                                                 "
 set clipboard=unnamed                                                          " use system clipboard
 set expandtab                                                                  " tabs
 set hlsearch                                                                   " highlight search results
+set incsearch                                                                  " live update search results
 set nobackup                                                                   " disable backups
 set nocompatible                                                               " required by vundle
 set noswapfile                                                                 " disable backups
 set nowritebackup                                                              " disable backups
 set number                                                                     " enable line numbers
 set shiftwidth=2                                                               " tabs
+set showcmd                                                                    " show current command on bottom line
 set smarttab                                                                   " tabs
 set softtabstop=2                                                              " tabs
 set textwidth=0                                                                " disable autowrapping
