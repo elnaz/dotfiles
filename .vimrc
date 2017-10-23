@@ -13,6 +13,7 @@ set nowritebackup                                                              "
 set number                                                                     " enable line numbers
 set shiftwidth=2                                                               " tabs
 set showcmd                                                                    " show current command on bottom line
+set shortmess+=c                                                               " fix ycm
 set smarttab                                                                   " tabs
 set softtabstop=2                                                              " tabs
 set textwidth=0                                                                " disable autowrapping
@@ -47,6 +48,8 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.DS_Store$'
   \ }
 
+let g:go_fmt_command = "goimports"
+
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
@@ -60,6 +63,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 nmap <leader>ae :Tabularize /=<CR>
+nmap <leader>af :Tabularize /from<CR>
 nmap <leader>c :TComment<CR>
 vmap <leader>c :TComment<CR>
 nmap <leader>C :TCommentBlock<CR>
