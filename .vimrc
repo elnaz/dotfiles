@@ -16,7 +16,7 @@ set showcmd                                                                    "
 set shortmess+=c                                                               " fix ycm
 set smarttab                                                                   " tabs
 set softtabstop=2                                                              " tabs
-set textwidth=0                                                                " disable autowrapping
+set textwidth=80                                                               " disable autowrapping
 set wrapmargin=0                                                               " disable autowrapping
 
 " PLUGINS: INSTALL -----------------------------------------------------------
@@ -62,6 +62,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+nmap <leader>ac :Tabularize /:<CR>
 nmap <leader>ae :Tabularize /=<CR>
 nmap <leader>af :Tabularize /from<CR>
 nmap <leader>c :TComment<CR>
