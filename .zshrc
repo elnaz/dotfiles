@@ -1,4 +1,5 @@
 export PATH=$PATH:$HOME/.rvm/bin:/usr/local/bin:/usr/local/Library/Formula/nvm.rb
+export GOPATH="$HOME/dev"
 
 export EDITOR="vim"
 
