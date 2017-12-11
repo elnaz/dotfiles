@@ -18,3 +18,12 @@ unset file
 source $HOME/.nvm/nvm.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+# grep
+GREP_OPTIONS=""
+GREP_OPTIONS+=" --color=auto"
+GREP_OPTIONS+=" --exclude=./*.log"
+GREP_OPTIONS+=" --exclude-dir=.git"
+GREP_OPTIONS+=" --exclude-dir=node_modules"
+GREP_OPTIONS+=" --exclude-dir=coverage"
+export GREP_OPTIONS
